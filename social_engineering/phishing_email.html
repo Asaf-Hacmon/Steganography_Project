@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>דוגמת פישינג — פרויקט סטגנוגרפיה</title>
+<style>
+  /* ===== DEMO BANNER ===== */
+  .demo-banner {
+    background: #d32f2f; color: #fff; text-align: center;
+    padding: 10px; font-family: Arial, sans-serif; font-size: 14px;
+    font-weight: bold; letter-spacing: 1px;
+  }
+
+  body { margin: 0; background: #f1f3f4; font-family: Arial, sans-serif; }
+
+  /* ===== EMAIL CLIENT SHELL ===== */
+  .client-shell {
+    max-width: 860px; margin: 24px auto; background: #fff;
+    border: 1px solid #dadce0; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  }
+  .client-header {
+    background: #1a73e8; color: #fff; padding: 14px 20px;
+    font-size: 20px; font-weight: bold; display: flex; align-items: center; gap: 10px;
+  }
+  .client-header span { font-size: 13px; font-weight: normal; opacity: .8; }
+
+  /* ===== EMAIL METADATA ===== */
+  .email-meta {
+    border-bottom: 1px solid #e0e0e0; padding: 16px 24px;
+    font-size: 13px; color: #444; line-height: 1.8;
+  }
+  .email-meta .subject {
+    font-size: 20px; font-weight: bold; color: #202124; margin-bottom: 10px;
+  }
+  .email-meta .field { display: flex; gap: 8px; }
+  .email-meta .label { color: #888; min-width: 50px; }
+  .email-meta .sender-avatar {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: #1a73e8; color: #fff; display: inline-flex;
+    align-items: center; justify-content: center; font-size: 16px;
+    font-weight: bold; margin-left: 10px; vertical-align: middle;
+  }
+
+  /* ===== EMAIL BODY ===== */
+  .email-body {
+    padding: 28px 32px; font-size: 14px; color: #202124; line-height: 1.8;
+    direction: rtl;
+  }
+  .email-body p { margin: 0 0 14px; }
+  .download-box {
+    border: 1px solid #dadce0; border-radius: 8px;
+    padding: 16px 20px; margin: 20px 0;
+    display: flex; align-items: center; gap: 16px;
+    background: #f8f9fa;
+  }
+  .file-icon {
+    width: 48px; height: 56px; background: #1a73e8;
+    border-radius: 4px; display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 11px; font-weight: bold; flex-shrink: 0;
+  }
+  .file-details { flex: 1; }
+  .file-name { font-weight: bold; font-size: 14px; }
+  .file-size { font-size: 12px; color: #888; }
+  .download-btn {
+    background: #1a73e8; color: #fff; border: none;
+    padding: 8px 18px; border-radius: 4px; cursor: pointer;
+    font-size: 13px; font-weight: bold; text-decoration: none;
+    display: inline-block;
+  }
+  .download-btn:hover { background: #1558b0; }
+
+  .email-footer { padding: 0 32px 24px; font-size: 12px; color: #888; direction: rtl; }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">⚠️ זהו מסמך הדגמה לצורכי לימוד בלבד — לא לשימוש זדוני ⚠️</div>
+
+<div class="client-shell">
+  <!-- Email client header -->
+  <div class="client-header">
+    <span style="font-size:22px">✉</span>
+    Mail
+    <span>— סימולציית לקוח מייל</span>
+  </div>
+
+  <!-- Email metadata -->
+  <div class="email-meta">
+    <div class="subject">📸 שיתפתי איתך אלבום תמונות — בדוק/י!</div>
+    <div class="field">
+      <span class="label">מאת:</span>
+      <span>
+        <span class="sender-avatar">ד</span>
+        <strong>דניאל כהן</strong> &lt;daniel.cohen92@gmail.com&gt;
+      </span>
+    </div>
+    <div class="field"><span class="label">אל:</span> <span>you@example.com</span></div>
+    <div class="field"><span class="label">תאריך:</span> <span>יום ב׳, 16 ביוני 2026, 09:14</span></div>
+  </div>
+
+  <!-- Email body -->
+  <div class="email-body">
+    <p>היי,</p>
+    <p>
+      סידרתי סוף סוף את כל התמונות מהטיול שלנו לאילת 😊<br>
+      שיתפתי איתך את האלבום דרך כלי הצפייה שלי — זה מאפשר לך לראות את כל התמונות ברצף בנוחות.
+    </p>
+    <p>
+      <strong>פשוט הורד/י את הקובץ למטה, הפעל/י אותו, ותראה/י ישירות את התמונות:</strong>
+    </p>
+
+    <div class="download-box">
+      <div class="file-icon">EXE</div>
+      <div class="file-details">
+        <div class="file-name">ImageViewer.exe</div>
+        <div class="file-size">קובץ הרצה • 8.2 MB • מאומת ✔</div>
+      </div>
+      <a class="download-btn" href="#">הורדה</a>
+    </div>
+
+    <p>
+      אם יש בעיה עם ההורדה, ניתן גם לקבל את הקובץ דרך הכתובת:
+      <a href="#" style="color:#1a73e8">photos-share.net/album/daniel2026</a>
+    </p>
+
+    <p>תודה ושיהיה לך יום נעים!<br>דניאל</p>
+  </div>
+
+  <div class="email-footer">
+    <hr style="border:none;border-top:1px solid #e0e0e0;margin-bottom:12px;">
+    Gmail — © 2026 Google LLC
+  </div>
+</div>
+
+</body>
+</html>

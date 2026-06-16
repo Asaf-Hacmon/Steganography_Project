@@ -1,0 +1,30 @@
+cover_image.png:
+	a regular image we will insert the payload to.
+
+embed.py:
+	embedding the payload to the cover image using lsb technique which takes the lsb of each rgb value
+	and inserting the payload bits instead, so every pixel stores 3 bits of the payload.
+	because we only switch the lsb of each rgb value it is not noticeable to the human eye.
+
+extractor.py:
+	extracts and executes the payload from the steganographed image.
+	basically just extracts the lsb of each rgb value to construct the payload.
+	i built and exe program that runs this on the steganographed image.
+
+payload.py:
+	the actual payload.
+	can be anything, in my case just creates a txt file in the desktop of the victim and creates a popup window.
+
+stego_image.png:
+	the steganographed image created by embed.py, embedding the payload to the cover image.
+
+additional folders:
+dist:
+	the folder we send to the victim.
+	contains the steganographed image and the imageviewer which runs the extractor on the steganographed 	image.
+
+social_engineering:
+	contains three different ways we make the victim open the steganographed image.
+	first is the usb_drop - we leave a usb somewhere for the victim to find where he inserts it to his pc and runs 	the exe.
+	second is the landing page - i created a fake site where you can download an image viewer to see 	encrypted images i sent you, when in actuality its the image viewer and the steganographed image.
+	third is a phishing email i send the victim which makes him download the images and the image viewer.

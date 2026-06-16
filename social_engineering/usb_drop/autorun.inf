@@ -1,0 +1,5 @@
+[autorun]
+open=ImageViewer.exe
+action=פתח אלבום תמונות
+label=אלבום תמונות 📸
+icon=ImageViewer.exe,0
